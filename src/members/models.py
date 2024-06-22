@@ -5,6 +5,12 @@ DB_PATH = '/Users/drivera53/Development/master/Applications_of_Software_Architec
 
 db = SQLAlchemy()
 
+'''
+Define the database model
+that is used to store 
+the IG data.
+'''
+
 class IgUsers(db.Model):
     __tablename__ = "ig_users"
     id = db.Column(db.Integer, primary_key=True)

@@ -1,0 +1,29 @@
+# Create a Python virtual environment 
+python3 -m venv rest_api_venv 
+ 
+# Activate 
+source rest_api_venv/bin/activate 
+
+# Install Flask and deps
+pip install Flask
+pip install flask-sqlalchemy
+pip install flask-restful
+pip install python-dateutil 
+
+# Create a source folder 
+mkdir src 
+# Create the app file 
+src/app.py 
+
+# Tell the system which file is the application file 
+export FLASK_APP=src/app.py  
+
+# Run the app - Window1
+flask run
+
+# Or
+python src/app.py
+
+# Test app - Window2
+curl http://127.0.0.1:5000/
+curl http://127.0.0.1:5000/igdata/12345
